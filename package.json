@@ -1,0 +1,12 @@
+{
+  "name": "khaos-segmentio-integration",
+  "description": "Khaos template for segmentio/integrations",
+  "repository": "git://github.com/segmentio/khaos-segmentio-integration.git",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.x"
+  }
+}
