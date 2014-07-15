@@ -1,7 +1,10 @@
 
 # khaos-segmentio-integration
 
-Khaos template for segmentio/integrations
+  A [khaos][khaos] template for creating new [segmentio/integrations][integrations].
+
+[khaos]: https:github.com/segmentio/khaos
+[integrations]: https:github.com/segmentio/integrations
 
 ## Usage
 
