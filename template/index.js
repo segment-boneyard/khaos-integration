@@ -13,18 +13,6 @@ var {{basename}} = module.exports = integration('{{basename}}')
   .mapper(mapper){{/mapper}}
   .retries(2);
 
-/**
- * Validate.
- *
- * @param {Facade} message
- * @param {Object} settings
- * @return {Error}
- * @api public
- */
-
-{{basename}}.prototype.validate = function(message, settings){
-  return this.ensure(settings.apiKey, 'apiKey');
-};
 {{#identify}}
 
 /**
