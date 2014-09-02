@@ -7,6 +7,8 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "khaos": "^0.5.2",
     "mocha": "1.x"
   }
 }

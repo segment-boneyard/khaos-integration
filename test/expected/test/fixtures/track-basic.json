@@ -1,0 +1,23 @@
+{
+  "input": {
+    "type": "track",
+    "event": "played a song",
+    "properties": {
+      "song": "Frank AB",
+      "artist": "Rural Alberta Advantage"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  },
+  "output": {
+    "type": "track",
+    "event": "played a song",
+    "properties": {
+      "song": "frank ab"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  }
+}

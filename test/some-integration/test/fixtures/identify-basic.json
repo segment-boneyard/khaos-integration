@@ -1,0 +1,26 @@
+{
+  "input": {
+    "type": "identify",
+    "userId": "user-id",
+    "traits": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "jd@example.com"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  },
+  "output": {
+    "type": "identify",
+    "userId": "user-id",
+    "traits": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "jd@example.com"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  }
+}

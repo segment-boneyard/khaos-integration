@@ -1,0 +1,26 @@
+{
+  "input": {
+    "type": "page",
+    "userId": "user-id",
+    "name": "Page & Screen Methods",
+    "category": "Docs",
+    "properties": {
+      "url": "https://segment.io/docs/tracking-api/page-and-screen/"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  },
+  "output": {
+    "type": "page",
+    "userId": "user-id",
+    "name": "Page & Screen Methods",
+    "category": "Docs",
+    "properties": {
+      "url": "https://segment.io/docs/tracking-api/page-and-screen/"
+    },
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  }
+}

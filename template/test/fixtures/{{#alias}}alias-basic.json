@@ -1,0 +1,18 @@
+{
+  "input": {
+    "type": "alias",
+    "previousId": "previous-id",
+    "userId": "user-id",
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  },
+  "output": {
+    "type": "alias",
+    "previousId": "previous-id",
+    "userId": "user-id",
+    "context": {
+      "ip": "10.0.0.1"
+    }
+  }
+}

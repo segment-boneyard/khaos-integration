@@ -8,8 +8,9 @@ var Integration = require('segmentio-integration');
  * {{docs}}
  */
 
-var {{basename}} = module.exports = integration('{{basename}}')
+var {{pascalcase basename}} = module.exports = integration('{{capitalcase basename}}')
   .endpoint('{{endpoint}}'){{#mapper}}
+  .ensure('settings.apiKey')
   .mapper(mapper){{/mapper}}
   .retries(2);
 
@@ -21,13 +22,11 @@ var {{basename}} = module.exports = integration('{{basename}}')
  * {{docs}}
  *
  * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}identify{{/if}}
- * @param {Object} settings
  * @param {Function} fn
  * @api public
  */
 
-{{basename}}.prototype.identify = function({{#if mapper}}payload{{else}}identify{{/if}}, settings, fn){
-  {{#unless mapper}}var payload = identify.json();{{/unless}}
+{{pascalcase basename}}.prototype.identify = function({{#if mapper}}payload{{else}}identify{{/if}}, fn){
   return this
     .post()
     .send(payload)
@@ -41,13 +40,11 @@ var {{basename}} = module.exports = integration('{{basename}}')
  * {{docs}}
  *
  * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}track{{/if}}
- * @param {Object} settings
  * @param {Function} fn
  * @api public
  */
 
-{{basename}}.prototype.track = function({{#if mapper}}payload{{else}}track{{/if}}, settings, fn){
-  {{#unless mapper}}var payload = track.json();{{/unless}}
+{{pascalcase basename}}.prototype.track = function({{#if mapper}}payload{{else}}track{{/if}}, fn){
   return this
     .post()
     .send(payload)
@@ -61,13 +58,11 @@ var {{basename}} = module.exports = integration('{{basename}}')
  * {{docs}}
  *
  * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}page{{/if}}
- * @param {Object} settings
  * @param {Function} fn
  * @api public
  */
 
-{{basename}}.prototype.page = function({{#if mapper}}payload{{else}}page{{/if}}, settings, fn){
-  {{#unless mapper}}var payload = page.json();{{/unless}}
+{{pascalcase basename}}.prototype.page = function({{#if mapper}}payload{{else}}page{{/if}}, fn){
   return this
     .post()
     .send(payload)
@@ -81,13 +76,11 @@ var {{basename}} = module.exports = integration('{{basename}}')
  * {{docs}}
  *
  * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}group{{/if}}
- * @param {Object} settings
  * @param {Function} fn
  * @api public
  */
 
-{{basename}}.prototype.group = function({{#if mapper}}payload{{else}}group{{/if}}, settings, fn){
-  {{#unless mapper}}var payload = group.json();{{/unless}}
+{{pascalcase basename}}.prototype.group = function({{#if mapper}}payload{{else}}group{{/if}}, fn){
   return this
     .post()
     .send(payload)
@@ -100,13 +93,11 @@ var {{basename}} = module.exports = integration('{{basename}}')
  * {{docs}}
  *
  * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}alias{{/if}}
- * @param {Object} settings
  * @param {Function} fn
  * @api public
  */
 
-{{basename}}.prototype.alias = function({{#if mapper}}payload{{else}}alias{{/if}}, settings, fn){
-  {{#unless mapper}}var payload = alias.json();{{/unless}}
+{{pascalcase basename}}.prototype.alias = function({{#if mapper}}payload{{else}}alias{{/if}}, fn){
   return this
     .post()
     .send(payload)

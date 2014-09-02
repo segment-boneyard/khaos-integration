@@ -1,4 +1,3 @@
-{{#identify}}
 
 /**
  * Map identify.
@@ -11,7 +10,7 @@
 
 exports.identify = function(identify, settings){
   return identify.json();
-};{{/identify}}{{#track}}
+};
 
 /**
  * Map track
@@ -24,7 +23,7 @@ exports.identify = function(identify, settings){
 
 exports.track = function(track, settings){
   return track.json();
-};{{/track}}{{#page}}
+};
 
 /**
  * Map page.
@@ -37,7 +36,7 @@ exports.track = function(track, settings){
 
 exports.page = function(page, settings){
   return page.json();
-};{{/page}}{{#group}}
+};
 
 /**
  * Map group.
@@ -50,7 +49,7 @@ exports.page = function(page, settings){
 
 exports.group = function(group, settings){
   return group.json();
-};{{/group}}{{#alias}}
+};
 
 /**
  * Map alias.
@@ -63,4 +62,4 @@ exports.group = function(group, settings){
 
 exports.alias = function(alias, settings){
   return alias.json();
-};{{/alias}}
+};
