@@ -17,7 +17,7 @@ describe('Some Integration', function(){
 
   it('should have the correct settings', function(){
     test
-      .name(some-integration)
+      .name('Some Integration')
       .channels(['server', 'mobile', 'client'])
       .ensure('settings.apiKey')
       .retries(2);

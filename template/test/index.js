@@ -17,7 +17,7 @@ describe('{{capitalcase basename}}', function(){
 
   it('should have the correct settings', function(){
     test
-      .name({{basename}})
+      .name('{{capitalcase basename}}')
       .channels(['server', 'mobile', 'client'])
       .ensure('settings.apiKey')
       .retries(2);
