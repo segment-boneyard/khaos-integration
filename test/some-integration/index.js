@@ -1,5 +1,5 @@
 
-var Integration = require('segmentio-integration');
+var integration = require('segmentio-integration');
 var mapper = require('./mapper');
 
 /**
