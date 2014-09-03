@@ -25,11 +25,12 @@ describe('Some Integration', function(){
 
   describe('.validate()', function() {
     it('should not be valid without an api key', function(){
-      test.invalid({}, {});
+      delete settings.apiKey;
+      test.invalid({}, settings);
     });
 
-    it('should be valid with an api key', function(){
-      test.valid({}, { apiKey: 'apiKey' });
+    it('should be valid with complete settings', function(){
+      test.valid({}, settings);
     });
   });
 
