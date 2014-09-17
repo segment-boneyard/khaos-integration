@@ -1,8 +1,9 @@
 {
   "input": {
-    "type": "page",
+    "type": "screen",
     "userId": "user-id",
     "name": "Page & Screen Methods",
+    "timestamp": "2014",
     "category": "Docs",
     "properties": {
       "url": "https://segment.io/docs/tracking-api/page-and-screen/"
@@ -12,10 +13,11 @@
     }
   },
   "output": {
-    "type": "page",
+    "type": "screen",
     "userId": "user-id",
     "name": "Page & Screen Methods",
     "category": "Docs",
+    "timestamp": "2014-01-01T00:00:00.000Z",
     "properties": {
       "url": "https://segment.io/docs/tracking-api/page-and-screen/"
     },

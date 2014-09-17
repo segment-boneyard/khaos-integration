@@ -4,9 +4,9 @@ var khaos = require('khaos');
 
 it('should create an integration', function(done){
   setTimeout(answer, 20);
-  khaos('template', 'test/some-integration').run(function(err){
+  khaos('template', 'test/integration').run(function(err){
     if (err) return done(err);
-    equal('test/expected', 'test/some-integration');
+    equal('test/expected', 'test/integration');
     done();
   });
 });
@@ -19,8 +19,8 @@ var answers = [
   'y',
   'y',
   'y',
-  'http://some-integration.com/docs',
-  'http://api.some-integration.com/v1',
+  'https://example.com/docs',
+  'https://api.example.com/v1',
 ];
 
 function answer(){

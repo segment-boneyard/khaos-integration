@@ -1,4 +1,8 @@
 
+/**
+ * Module dependencies.
+ */
+
 var integration = require('segmentio-integration');
 {{#mapper}}var mapper = require('./mapper');{{/mapper}}
 
@@ -9,13 +13,13 @@ var integration = require('segmentio-integration');
  */
 
 var {{pascalcase basename}} = module.exports = integration('{{capitalcase basename}}')
+  .channels(['server', 'mobile', 'client'])
   .endpoint('{{endpoint}}'){{#mapper}}
   .ensure('settings.apiKey')
   .mapper(mapper){{/mapper}}
   .retries(2);
 
 {{#identify}}
-
 /**
  * Identify.
  *
@@ -33,7 +37,6 @@ var {{pascalcase basename}} = module.exports = integration('{{capitalcase basena
     .end(this.handle(fn));
 };
 {{/identify}}{{#track}}
-
 /**
  * Track.
  *
@@ -51,7 +54,6 @@ var {{pascalcase basename}} = module.exports = integration('{{capitalcase basena
     .end(this.handle(fn));
 };
 {{/track}}{{#page}}
-
 /**
  * Page.
  *
@@ -68,8 +70,24 @@ var {{pascalcase basename}} = module.exports = integration('{{capitalcase basena
     .send(payload)
     .end(this.handle(fn));
 };
-{{/page}}{{#group}}
+{{/page}}{{#screen}}
+/**
+ * Screen.
+ *
+ * {{docs}}
+ *
+ * @param {{#if mapper}}{Object}{{else}}{Facade}{{/if}} {{#if mapper}}payload{{else}}screen{{/if}}
+ * @param {Function} fn
+ * @api public
+ */
 
+{{pascalcase basename}}.prototype.screen = function({{#if mapper}}payload{{else}}screen{{/if}}, fn){
+  return this
+    .post()
+    .send(payload)
+    .end(this.handle(fn));
+};
+{{/screen}}{{#group}}
 /**
  * Group.
  *

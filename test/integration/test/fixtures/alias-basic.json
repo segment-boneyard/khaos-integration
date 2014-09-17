@@ -3,6 +3,7 @@
     "type": "alias",
     "previousId": "previous-id",
     "userId": "user-id",
+    "timestamp": "2014",
     "context": {
       "ip": "10.0.0.1"
     }
@@ -10,6 +11,7 @@
   "output": {
     "type": "alias",
     "previousId": "previous-id",
+    "timestamp": "2014-01-01T00:00:00.000Z",
     "userId": "user-id",
     "context": {
       "ip": "10.0.0.1"

@@ -1,23 +1,23 @@
 
 var Test = require('segmentio-integration-tester');
-var SomeIntegration = require('../');
+var Integration = require('../');
 var mapper = require('../mapper');
 
-describe('Some Integration', function(){
-  var someIntegration;
+describe('Integration', function(){
+  var integration;
   var settings;
   var test;
 
   beforeEach(function(){
     settings = { apiKey: 'key' };
-    someIntegration = new SomeIntegration(settings)
-    test = Test(someIntegration, __dirname);
+    integration = new Integration(settings)
+    test = Test(integration, __dirname);
     test.mapper(mapper);
   });
 
   it('should have the correct settings', function(){
     test
-      .name('Some Integration')
+      .name('Integration')
       .channels(['server', 'mobile', 'client'])
       .ensure('settings.apiKey')
       .retries(2);
@@ -75,6 +75,8 @@ describe('Some Integration', function(){
   describe('.identify()', function(){
     it('should send basic identify', function(done){
       var json = test.fixture('identify-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .identify(json.input)
         .sends(json.output)
@@ -94,6 +96,8 @@ describe('Some Integration', function(){
   describe('.group()', function(){
     it('should send basic group', function(done){
       var json = test.fixture('group-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .group(json.input)
         .sends(json.output)
@@ -113,6 +117,8 @@ describe('Some Integration', function(){
   describe('.track()', function(){
     it('should send basic track', function(done){
       var json = test.fixture('track-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .track(json.input)
         .sends(json.output)
@@ -132,6 +138,8 @@ describe('Some Integration', function(){
   describe('.page()', function(){
     it('should send basic page', function(done){
       var json = test.fixture('page-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .page(json.input)
         .sends(json.output)
@@ -151,6 +159,8 @@ describe('Some Integration', function(){
   describe('.screen()', function(){
     it('should send basic screen', function(done){
       var json = test.fixture('screen-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .screen(json.input)
         .sends(json.output)
@@ -170,6 +180,8 @@ describe('Some Integration', function(){
   describe('.alias()', function(){
     it('should send basic alias', function(done){
       var json = test.fixture('alias-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .alias(json.input)
         .sends(json.output)

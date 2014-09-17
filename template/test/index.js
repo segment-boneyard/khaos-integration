@@ -75,6 +75,8 @@ describe('{{capitalcase basename}}', function(){
   {{#identify}}describe('.identify()', function(){
     it('should send basic identify', function(done){
       var json = test.fixture('identify-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .identify(json.input)
         .sends(json.output)
@@ -94,6 +96,8 @@ describe('{{capitalcase basename}}', function(){
   {{#group}}describe('.group()', function(){
     it('should send basic group', function(done){
       var json = test.fixture('group-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .group(json.input)
         .sends(json.output)
@@ -113,6 +117,8 @@ describe('{{capitalcase basename}}', function(){
   {{#track}}describe('.track()', function(){
     it('should send basic track', function(done){
       var json = test.fixture('track-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .track(json.input)
         .sends(json.output)
@@ -132,6 +138,8 @@ describe('{{capitalcase basename}}', function(){
   {{#page}}describe('.page()', function(){
     it('should send basic page', function(done){
       var json = test.fixture('page-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .page(json.input)
         .sends(json.output)
@@ -151,6 +159,8 @@ describe('{{capitalcase basename}}', function(){
   {{#screen}}describe('.screen()', function(){
     it('should send basic screen', function(done){
       var json = test.fixture('screen-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .screen(json.input)
         .sends(json.output)
@@ -170,6 +180,8 @@ describe('{{capitalcase basename}}', function(){
   {{#alias}}describe('.alias()', function(){
     it('should send basic alias', function(done){
       var json = test.fixture('alias-basic');
+      var output = json.output;
+      output.timestamp = new Date(output.timestamp);
       test
         .alias(json.input)
         .sends(json.output)

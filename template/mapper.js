@@ -9,7 +9,7 @@
  * @api private
  */
 
-exports.identify = function(identify, settings){
+exports.identify = function(identify){
   return identify.json();
 };{{/identify}}{{#track}}
 
@@ -22,7 +22,7 @@ exports.identify = function(identify, settings){
  * @api private
  */
 
-exports.track = function(track, settings){
+exports.track = function(track){
   return track.json();
 };{{/track}}{{#page}}
 
@@ -35,9 +35,22 @@ exports.track = function(track, settings){
  * @api private
  */
 
-exports.page = function(page, settings){
+exports.page = function(page){
   return page.json();
-};{{/page}}{{#group}}
+};{{/page}}{{#screen}}
+
+/**
+ * Map screen.
+ *
+ * @param {Screen} screen
+ * @param {Object} settings
+ * @return {Object}
+ * @api private
+ */
+
+exports.screen = function(screen){
+  return screen.json();
+};{{/screen}}{{#group}}
 
 /**
  * Map group.
@@ -48,7 +61,7 @@ exports.page = function(page, settings){
  * @api private
  */
 
-exports.group = function(group, settings){
+exports.group = function(group){
   return group.json();
 };{{/group}}{{#alias}}
 
@@ -61,6 +74,6 @@ exports.group = function(group, settings){
  * @api private
  */
 
-exports.alias = function(alias, settings){
+exports.alias = function(alias){
   return alias.json();
 };{{/alias}}

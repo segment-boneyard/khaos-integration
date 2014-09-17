@@ -1,6 +1,7 @@
 {
   "input": {
     "type": "identify",
+    "timestamp": "2014",
     "userId": "user-id",
     "traits": {
       "firstName": "John",
@@ -13,6 +14,7 @@
   },
   "output": {
     "type": "identify",
+    "timestamp": "2014-01-01T00:00:00.000Z",
     "userId": "user-id",
     "traits": {
       "firstName": "John",
