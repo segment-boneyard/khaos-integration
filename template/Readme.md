@@ -1,0 +1,1 @@
+# {{capitalcase basename}} server-side integration
