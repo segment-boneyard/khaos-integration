@@ -3,9 +3,9 @@ TESTS = $(wildcard test/*.js)
 SRC = $(wildcard lib/*.js)
 GREP ?=.
 
-build: node_modules test-style test-cov
+default: node_modules test-style test-cov
 
-node_modules: clean
+node_modules: package.json
 	@npm install 
 
 test: test-style
@@ -26,7 +26,7 @@ test-cov:
 			--ui exports
 
 test-style:
-	@node_modules/.bin/jscs lib
+	@node_modules/.bin/jscs lib test
 
 clean:
 	rm -rf coverage node_modules *.log
